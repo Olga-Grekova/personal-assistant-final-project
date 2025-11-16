@@ -90,6 +90,27 @@ class Contact:
         info = f"Ім'я: {self.name.value}, Телефон: {phone_strings}{email_str}{address_str}{bday_str}"
         return info
 
+    def to_dict(self):
+        return {
+            'name': self.name.value,
+            'phones': [phone.value for phone in self.phones],
+            'email': self.email.value if self.email else None,
+            'address': self.address.value if self.address else None,
+            'birthday': self.birthday.value.strftime("%d.%m.%Y") if self.birthday else None
+        }
+    
+    @staticmethod
+    def from_dict(data: dict):
+        contact = Contact(
+            name=data['name'],
+            address=data.get('address'),
+            email=data.get('email'),
+            birthday=data.get('birthday')
+        )
+        for phone in data.get('phones', []):
+            contact.add_phone(phone)
+        return contact
+
 # КНИГА (AddressBook)
 
 class AddressBook(UserDict):

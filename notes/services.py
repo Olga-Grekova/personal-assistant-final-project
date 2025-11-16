@@ -1,9 +1,9 @@
 import json
 import os
-from models.note import Note
+from .models import Note
 
 
-class NoteManager:
+class NoteService:
     def __init__(self, filename="notes.json"):
         self.filename = filename
         self.notes = self.load()
