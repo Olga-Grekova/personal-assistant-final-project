@@ -1,0 +1,28 @@
+[
+    {
+        "text": "Купити молоко та хліб",
+        "tags": [
+            "shopping"
+        ]
+    },
+    {
+        "text": "Повторити Python OOP",
+        "tags": [
+            "study",
+            "python"
+        ]
+    },
+    {
+        "text": "Купити молоко",
+        "tags": [
+            "shopping"
+        ]
+    },
+    {
+        "text": "Повторити Python OOP",
+        "tags": [
+            "study",
+            "python"
+        ]
+    }
+]
