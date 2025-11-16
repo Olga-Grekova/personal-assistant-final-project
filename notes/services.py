@@ -3,7 +3,7 @@ import os
 from models.note import Note
 
 
-class NoteManager:
+class NoteServices:
     def __init__(self, filename="notes.json"):
         self.filename = filename
         self.notes = self.load()
