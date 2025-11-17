@@ -10,7 +10,7 @@ class Note:
         if new_text is not None:
             if new_text.strip() == "":
                 raise ValueError("Текст нотатки не може бути порожнім!")
-        self.text = new_text
+            self.text = new_text
 
         if new_tags is not None:
             self.tags = new_tags

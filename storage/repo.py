@@ -75,10 +75,10 @@ class ContactRepository:
         
         return {
             'name': getattr(contact, 'name', ''),
-            'phone': getattr(contact, 'phone', None),
+            'phones': getattr(contact, 'phones', []),
             'email': getattr(contact, 'email', None),
-            'birthday': getattr(contact, 'birthday', None),
-            'address': getattr(contact, 'address', None)
+            'address': getattr(contact, 'address', None),
+            'birthday': getattr(contact, 'birthday', None)
         }
     
     def clear(self) -> bool:
